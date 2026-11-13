@@ -16,7 +16,7 @@ if (!(Test-Path $PROFILE)) { New-Item -Type File -Force $PROFILE }
 ```
 Create a directory for videos:
 ```
-New-Item -ItemType Directory -Force -Path "C:\Users\YourUsername\videosrc"
+New-Item -ItemType Directory -Force -Path "C:\Users\YourUsername\videos"
 ```
 Find the names of your audio and video devices to insert them into the function:
 ```
@@ -38,7 +38,7 @@ function cam {
     -c:v libx264 `
     -preset veryfast `
     -c:a aac `
-    "C:\Users\YourUsername\videosrc\cam_$date.mp4"
+    "C:\Users\YourUsername\videos\cam_$date.mp4"
 }
 ```
 Save, close, reload your profile:
